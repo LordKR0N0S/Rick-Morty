@@ -1,0 +1,115 @@
+@import "../styles/variables.scss";
+
+.main-page {
+    padding: 86px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-page__image {
+    margin-bottom: 20px;
+    & img {
+        width: 600px;
+        height: 200px;
+    }
+}
+
+.main-page__form {
+    margin-bottom: 50px;
+    width: 100%;
+    & input {
+        outline: none;
+        width: 100%;
+        height: 56px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        padding: 10px 10px 10px 40px;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.5);
+        background: transparent url("../assets/search.png") no-repeat 12px center;
+    }
+}
+
+.main-page__list-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.main-page__list-card {
+    flex: 1 0 20%;
+    width: 240px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+    border-radius: 4px;
+    transition: 0.3s;
+    @media (max-width: 1060px) {
+        flex: 0 0 30%;
+    }
+    @media (max-width: 767px) {
+        flex: 0 0 40%;
+    }
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media (max-width: 600px) {
+    .main-page__image img {
+        width: 400px;
+        height: 132px;
+    }
+    .main-page__form {
+        width: 90%;
+    }
+    .main-page__list-card {
+        flex: 0 0 80%;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-page__image img {
+        width: 300px;
+        height: 100px;
+    }
+}
+
+.card-list__image {
+    display: block;
+    padding-bottom: 60%;
+    position: relative;
+    & img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+.card-list__content {
+    padding: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-list__title {
+    margin: 0;
+    @include textParameters(500, 20px, 30px);
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.card-list__text {
+    margin: 0;
+    @include textParameters(400, 14px, 21px);
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+}

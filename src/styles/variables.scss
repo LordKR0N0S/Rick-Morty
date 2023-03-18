@@ -1,0 +1,12 @@
+$font-family: "Roboto", sans-serif;
+$font-style-normal: normal;
+$background-color-main: #fff;
+$color-name-character: rgba(0, 0, 0, 0.87);
+$color-spicie-character: rgba(0, 0, 0, 0.6);
+$color-text-black: #081f32;
+
+@mixin textParameters($fw, $fs, $lh) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}
